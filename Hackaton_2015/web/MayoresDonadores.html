@@ -1,0 +1,105 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+                ${demo.css}
+                
+		</style>
+                <style type="text/css">
+                    .R_div1
+                    {
+                        position: absolute;
+                        cursor: pointer;
+                        top: 80%;
+                        left: 90%
+                    }
+                    .lbl
+                    {
+                        font-family: Verdana;
+                        cursor: pointer;
+                        color: darkgray;
+                        font-weight: bold;
+                    }
+                </style>
+		<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'area'
+        },
+        title: {
+            text: 'Estados con mayor actividad de donación'
+        },
+        subtitle: {
+            text: 'Fuente: Base de datos del CENATRA al 30 de Sept. 2015'
+        },
+        xAxis: {
+            categories: ['2010', '2011', '2012', '2013', '2014', '2015'],
+            tickmarkPlacement: 'on',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Número'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 1000;
+                }
+            }
+        },
+        tooltip: {
+            shared: true,
+            valueSuffix: ' Transplantes'
+        },
+        plotOptions: {
+            area: {
+                stacking: 'normal',
+                lineColor: '#666666',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#666666'
+                }
+            }
+        },
+        series: [{
+            name: 'Mexico',
+            data: [301, 357, 475, 507, 535, 489]
+        }, {
+            name: 'D.F.',
+            data: [186, 175, 306, 279, 389, 318]
+        }, {
+            name: 'Aguascalientes',
+            data: [154, 155, 171, 171, 154, 105]
+        }, {
+            name: 'Querétaro',
+            data: [77, 104, 84, 80, 86, 62]
+        }, {
+            name: 'Guanajuato',
+            data: [53, 72, 90, 95, 60, 59]
+        }]
+    });
+});
+		</script>
+	</head>
+	<body>
+<script src="js/highcharts.js"></script>
+<script src="js/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto;"></div>
+<p align=center><a href="MayoresDonadores.html"><img src="Recursos/link1.png"></a><a href="TasaDonacion.jsp"><img src="Recursos/link2.png"></a><a href="TransplanteRenal.html"><img src="Recursos/link3.png"></a></p>
+	
+        <div align="right" class="R_div1" onclick="parent.frames[4].location.href='Menu.jsp';">
+            <img src="Recursos/corazon.png" width="50px" height="50px" align="center"><br>
+            <label class="lbl">Regresar</label>
+        </div>
+        </body>
+</html>

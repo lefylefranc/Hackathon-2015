@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            .R_div1
+            {
+                position: absolute;
+                cursor: pointer;
+                top: 80%;
+                left: 91%
+            }
+            .R_div2
+            {
+                position: absolute;
+                width: 100%;
+                height: 97%;
+                left: 0px;
+                top: 0px;
+            }
+            .R_div2 img
+            {
+                max-height: 100%;
+                max-width: 100%;
+            }
+            .lbl
+            {
+                font-family: Verdana;
+                cursor: pointer;
+                color: darkgray;
+                font-weight: bold;
+            }
+            body
+            {
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div align="center" class="R_div2">
+           <img src="Recursos/Info_Razones.jpg"/> 
+        </div>
+        
+        <div align="right" class="R_div1" onclick="parent.frames[4].location.href='Menu.jsp';">
+            <img src="Recursos/corazon.png" width="50px" height="50px" align="center"><br>
+            <label class="lbl">Regresar</label>
+        </div>
+    </body>
+</html>
